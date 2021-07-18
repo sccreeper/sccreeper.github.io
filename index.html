@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="assets/stylesheets/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+
+    <title>sccreeper</title>
+
+</head>
+
+<body>
+
+    <div id="blocker"></div>
+
+    <canvas id="background-canvas" width="100" height="100"></canvas>
+
+    <div id="menu-bar">
+        <ul id="menu-content">
+            <li class="menu-button"><a href="/">Home</a></li>
+            <li class="menu-button"><a href="#projects">Projects</a></li>
+            <li class="menu-button"><a href="https://github.com/sccreeper" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+
+    <div id="welcome-message" class="no-select" text="sccreeper"></div>
+    <div id="down-button"><a href="#first"><i class="bi bi-arrow-down"></i></a></div>
+
+    <div class="no-blur content" style="padding-top: 5%;" id="first">
+        <h1 class="content-header">Projects</h1>
+        <div id="projects">
+            <div id="left" class="project">
+                <h2>PiBot</h2>
+                <div style="background-image: url('assets/images/projects/pibot.png');" class="project-thumb" title="Source">
+                    <div class="project-thumb-icon">
+                        <a href="https://github.com/sccreeper/pibot" target="_blank"></a>
+                    </div>
+                </div>
+                <p class="project-desc">PiBot is a project which aims to make making robots on with the Raspberry Pi easier.</p>
+            </div>
+            <div id="right" class="project">
+                <h2>image2excel</h2>
+                <div style="background-image: url('assets/images/projects/image2excel.png');" class="project-thumb" title="Source">
+                    <div class="project-thumb-icon">
+                        <a href="https://github.com/sccreeper/image2excel" target="_blank"></a>
+                    </div>
+                </div>
+                <p class="project-desc">image2excel is a project which converts images into Excel spreadsheets</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="no-blur content">
+        <h1 class="content-header">What I use</h1>
+        <div id="projects" class="split-into-three">
+            <div class="project">
+                <h2>Python</h2>
+                <div style="background-image: url('assets/images/icons/python.png');" class="project-thumb project-thumb-tool tool">
+                </div>
+            </div>
+            <div class="project ">
+                <h2>JavaScript</h2>
+                <div style="background-image: url( 'assets/images/icons/js.png'); " class="project-thumb project-thumb-tool tool">
+                </div>
+            </div>
+            <div class="project ">
+                <h2>Visual Studio Code</h2>
+                <div style="background-image: url( 'assets/images/icons/vscode.png')" class="project-thumb project-thumb-tool tool">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+<script src="assets/scripts/background.js "></script>
+<script src="assets/scripts/typewriter.js "></script>
