@@ -87,6 +87,8 @@ const mobileFramerate = 5;
 var mobilePos = { clientX: 128, clientY: 128 }
 const mobileSpeed = 5;
 
+var enabled = true;
+
 var gridHeight, gridWidth = 0;
 
 var grid = [
@@ -94,6 +96,7 @@ var grid = [
 ];
 
 function onWindowResize() {
+
     var body = document.body,
         html = document.documentElement;
 
@@ -103,6 +106,17 @@ function onWindowResize() {
 
     canvas.width = width;
     canvas.height = height;
+
+    if (!enabled && width > 600) {
+        enabled = true;
+        window.onmousemove = updateCanvas;
+    }
+
+    if (width < 600) {
+        enabled = false;
+        updateCanvas({});
+        return;
+    }
 
     ctx.beginPath();
     ctx.rect(0, 0, canvas.width, canvas.height);
@@ -126,6 +140,11 @@ function createAndFillTwoDArray({
 }
 
 function updateCanvas(e) {
+
+    if (!enabled) {
+        drawRectangle(canvas, new Position(0, 0), new Rectangle(canvas.width, canvas.height), brightestColour)
+        return;
+    }
 
     var actualPos = getMousePos(canvas, e);
 
@@ -181,11 +200,9 @@ window.onmousemove = updateCanvas;
 onWindowResize();
 updateCanvas({ clientX: 128, clientY: 128 });
 
-//If on mobile, then make add an interval to automate bg animation
+//If on mobile, don't update the canvas
 if (window.innerWidth < 600) {
-    setInterval(() => {
-        mobilePos = { clientX: mobilePos.clientX + mobileSpeed, clientY: mobilePos.clientY + mobileSpeed }
-
-        updateCanvas(mobilePos)
-    }, 1000 / mobileFramerate)
+    window.onmousemove = null;
+    updateCanvas({});
+    enabled = false;
 }

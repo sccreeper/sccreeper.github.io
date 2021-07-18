@@ -54,7 +54,7 @@ html {
     height: 100%;
     color: white;
     text-decoration: none;
-    transition: 0.25s;
+    transition: color 0.25s;
 }
 
 #menu-bar a:hover,
@@ -102,7 +102,19 @@ a:active {
     height: 9.5vw;
     border-radius: 9.5vw;
     background-size: 9.5vw 9.5vw;
+    position: absolute;
+}
+
+.project-thumb-background {
     margin-left: 41%;
+    padding: .25vw;
+    background-image: linear-gradient(to bottom right, var(--header-colour), var(--link-colour));
+    background-size: 10vw 10vw;
+    background-repeat: no-repeat;
+    width: 9.5vw;
+    height: 9.5vw;
+    border-radius: 50%;
+    background-size: cover;
 }
 
 .project-thumb-icon {
@@ -328,6 +340,25 @@ html {
         font-size: 3vw;
         text-decoration: none;
         display: inline;
+    }
+    #menu-content {
+        width: 50%;
+    }
+    #menu-bar {
+        height: 7.5%;
+    }
+    .content-header {
+        font-size: 2.75vh;
+    }
+    #welcome-message {
+        margin-top: 25%;
+        font-size: 3vh;
+    }
+    .project>h2 {
+        font-size: 2vh;
+    }
+    .project>p {
+        font-size: 1.25vh;
     }
 }
 
