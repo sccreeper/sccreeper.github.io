@@ -153,6 +153,30 @@ a:active {
     -webkit-text-fill-color: transparent;
 }
 
+/* Footer */
+#footer {
+    background-color: var(--content-bg-colour);
+}
+
+#footer a, a:visited {
+    text-decoration: none;
+    color: var(--default-text-colour);
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-name {
+    float: left;
+    margin-left: 1%;
+}
+
+.footer-source {
+    float: right;
+    margin-right: 1%;
+}
+
 
 /* Special rules for tools section */
 
@@ -354,10 +378,10 @@ html {
         margin-top: 25%;
         font-size: 3vh;
     }
-    .project>h2 {
+    .project h2 {
         font-size: 2vh;
     }
-    .project>p {
+    .project p {
         font-size: 1.25vh;
     }
 }
